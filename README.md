@@ -6,16 +6,18 @@ Telco Agent Skills are folders of instructions, scripts, and resources that AI a
 
 Each skill is designed to be a self-contained unit that an AI agent can use. The `SKILL.md` file within each skill's directory provides a detailed description of the skill's capabilities, expected inputs, and operational workflow. The goal is to create a standardized approach for building and using Telco-related skills.
 
-A key example is the `tmf-mcp-builder` skill, which demonstrates how to build TM Forum (TMF) compliant Management Component Platform (MCP) servers from TMF OpenAPI specifications.
+A key example is the `tmf-mcp-builder` skill, which demonstrates how to build TM Forum (TMF) compliant Management Component Protocol (MCP) servers from TMF OpenAPI specifications.
 
-## Using a Skill
+## Installing a Skill
+For OpenAI Codex
+Go to the project where you want to install the skill
+Launch codex
+> codex
 
-Skills are self-contained and can be integrated into your projects. While there is no universal installer, skills often come with scripts to help with their integration.
-
-For example, the `tmf-mcp-builder` skill includes a script to copy common assets into your project:
-```bash
-python tmf-mcp-builder/scripts/copy_tmf_commons.py --dest /path/to/your/project
-```
+Use skill-installer to install skills
+$skill-installer install "GitHub directory URL for the skill"
+For example, following command will install tmf-mcp-builder skill
+$skill-installer install https://github.com/oopsyz/skills/tree/main/tmf-mcp-builder
 
 ## Available Skills
 
