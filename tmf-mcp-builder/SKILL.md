@@ -82,6 +82,13 @@ When generating mock behavior from TMF OpenAPI:
 7. **Add an evaluation set (recommended)**
    - Create 10 read-only questions that require multiple tool calls.
    - If you need a template, follow the approach in the general mcp-builder evaluation guidance.
+8. **Generate README-TMFxxxx (required)**
+   - Create a `README-TMF####.md` file as the final step (after servers and tools are implemented).
+   - Use the TMF number from the OpenAPI spec (for TMF620, generate `README-TMF620.md`).
+   - Include: overview, endpoints/tools list, run instructions (mock server + MCP server), and environment variables.
+9. **Add requirements.txt (required)**
+   - Create a `requirements.txt` in the output folder that lists runtime dependencies.
+   - Include at least: `fastapi`, `uvicorn`, `httpx`, `mcp`, `pyyaml`.
 ## Bundled assets
 
 - **tmf_commons**: copy ssets/tmf_commons into your project root when you want the shared mock server utilities (or run scripts/copy_tmf_commons.py --dest <project-root>).
