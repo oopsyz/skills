@@ -8,14 +8,6 @@ Each skill is designed to be a self-contained unit that an AI agent can use. The
 
 A key example is the `tmf-mcp-builder` skill, which demonstrates how to build TM Forum (TMF) compliant Management Component Platform (MCP) servers from TMF OpenAPI specifications.
 
-## Using a Skill
-
-Skills are self-contained and can be integrated into your projects. While there is no universal installer, skills often come with scripts to help with their integration.
-
-For example, the `tmf-mcp-builder` skill includes a script to copy common assets into your project:
-```bash
-python tmf-mcp-builder/scripts/copy_tmf_commons.py --dest /path/to/your/project
-```
 
 ## Available Skills
 
