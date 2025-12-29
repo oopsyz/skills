@@ -79,3 +79,30 @@ populate_neo4j(
 
 See main project license.
 
+## Using in OpenAI Codex
+
+### Install the skill (once)
+
+In your target project directory:
+
+```bash
+codex
+$skill-installer install https://github.com/oopsyz/skills/tree/main/classdiagram-to-neo4j
+```
+
+Replace the URL with your fork/path if needed.
+
+### Example Codex prompt
+
+Put your diagram image somewhere in the project (for example `diagrams/product_offering.png`), then in Codex:
+
+```text
+$classdiagram-to-neo4j
+
+Extract `diagrams/product_offering.png` into `out/product_offering.json`, then populate Neo4j at `bolt://localhost:7687`.
+Use the OpenAI provider and keep the extraction deterministic (low temperature).
+After loading, run a Cypher query to list the first 10 `:Entity` nodes with their `name`.
+```
+
+Codex typically executes the same underlying steps as the CLI examples: `scripts/extract_diagram.py` (image -> structured JSON/YAML) followed by `scripts/populate_neo4j.py` (structured data -> Neo4j).
+
