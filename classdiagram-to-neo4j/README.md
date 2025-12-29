@@ -2,6 +2,25 @@
 
 This skill extracts structured data from UML class diagrams and populates Neo4j graph databases.
 
+## Why This Matters
+
+### For Telco
+
+- Telco domains (TMF APIs, product catalog, pricing, ordering) are highly relational; a graph makes dependency tracing, impact analysis, and lineage queries straightforward.
+- A lot of telco domain knowledge lives in diagrams (specs, architecture decks); extracting it into a graph makes it searchable and reusable across teams and tools.
+
+### Why a Graph Database
+
+- Telco models are many-to-many by default; Neo4j represents relationships as first-class edges instead of complex join patterns.
+- You can persist semantics on relationships (role, cardinality, direction, provenance, version), which matches what class diagrams encode and what architects need to reason about change.
+- Multi-hop questions ("what relates to what?") map directly to graph traversals and are efficient to query in Cypher.
+
+### Why It's Critical for AI
+
+- AI agents reason more reliably over explicit structure; a graph turns implicit diagram knowledge into a queryable model instead of free-form text.
+- It improves grounding for generation (APIs, mappings, docs) by letting agents fetch the exact entities/fields/relationships they need, reducing inconsistencies.
+- It enables relationship-aware retrieval (paths, neighbors, subgraphs), which matches telco questions better than keyword/document retrieval alone.
+
 ## Quick Start
 
 ### Installation
@@ -105,4 +124,8 @@ After loading, run a Cypher query to list the first 10 `:Entity` nodes with thei
 ```
 
 Codex typically executes the same underlying steps as the CLI examples: `scripts/extract_diagram.py` (image -> structured JSON/YAML) followed by `scripts/populate_neo4j.py` (structured data -> Neo4j).
+
+## Attribution
+
+Brought to you by [TinCan Lab](https://tincanwireless.com).
 
