@@ -53,9 +53,16 @@ A key example is the `tmf-mcp-builder` skill, which demonstrates how to build TM
    $skill-installer install "GitHub directory URL for the skill"
    ```
 
-For example, the following command will install the tmf-mcp-builder skill:
+For example, the following command will install the tmf-mcp-builder skill:      
 ```bash
 $skill-installer install https://github.com/oopsyz/skills/tree/main/tmf-mcp-builder
+```
+
+You can install other skills the same way, for example:
+
+```bash
+$skill-installer install https://github.com/oopsyz/skills/tree/main/classdiagram-to-neo4j
+$skill-installer install https://github.com/oopsyz/skills/tree/main/bpmn2skill
 ```
 
 ## Creating a Skill
@@ -89,7 +96,9 @@ The markdown content below contains the instructions, examples, and guidelines t
 
 ## Available Skills
 
-*   **tmf-mcp-builder**: A skill for building TM Forum (TMF) MCP servers from TMF OpenAPI specs.
+*   **tmf-mcp-builder**: Build TM Forum (TMF) MCP servers from TMF OpenAPI specs.
+*   **classdiagram-to-neo4j**: Extract entities/properties/relationships from UML class diagram images and populate Neo4j (see `classdiagram-to-neo4j/README.md`).
+*   **bpmn2skill**: Generate a complete `SKILL.md` by parsing a BPMN 2.0 XML process and translating it into skill actions and orchestration logic.
 
 ## License
 
