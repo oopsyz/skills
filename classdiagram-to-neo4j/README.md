@@ -54,12 +54,12 @@ populate_neo4j(
 
 ## Features
 
-- ✅ Vision model extraction (OpenAI GPT-4 Vision, Anthropic Claude)
-- ✅ Structured data extraction (entities, properties, relationships)
-- ✅ Scalable Neo4j relationship model
-- ✅ Batch processing support
-- ✅ Provenance tracking
-- ✅ YAML and JSON output formats
+- Vision model extraction (OpenAI GPT-4 Vision, Anthropic Claude)
+- Structured data extraction (entities, properties, relationships)
+- Scalable Neo4j relationship model
+- Batch processing support
+- Provenance tracking
+- YAML and JSON output formats
 
 ## Documentation
 
