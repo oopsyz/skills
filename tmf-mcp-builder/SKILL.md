@@ -54,6 +54,7 @@ When generating mock behavior from TMF OpenAPI:
 ## Practical build steps (Python)
 
 1. **Inventory the spec**
+   - Find the correct TMF OpenAPI YAML in https://github.com/tmforum-apis (users must pick the TMFxxx spec/version that matches their API).
    - Determine base paths, main resources, and required operations.
    - Extract required fields for create/patch input models.
 
