@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "sec-mcp": {
+      "url": "http://security_mcp_url/mcp",
+      "transport": "http",
+      "headers": {
+        "API_KEY":"your_tincan_token"      
+	}
+    }
+  }
+}
